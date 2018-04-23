@@ -1,0 +1,40 @@
+﻿<Page
+
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CircularGaugeLesson"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Gauges="using:DevExpress.UI.Xaml.Gauges"
+    x:Class="CircularGaugeLesson.MainPage"
+    mc:Ignorable="d">
+
+    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+
+        <Gauges:CircularGauge>
+            <Gauges:ArcScale StartValue="0" EndValue="12"
+                             StartAngle="-90" EndAngle="270"
+                             MajorIntervalCount="12" MinorIntervalCount="5">
+                <Gauges:ArcScale.Ranges>    
+                    <Gauges:ArcScaleRange StartValue="0" EndValue="4"/>
+                    <Gauges:ArcScaleRange EndValue="8" StartValue="4"/>
+                    <Gauges:ArcScaleRange EndValue="12" StartValue="8"/>
+                </Gauges:ArcScale.Ranges>
+                <Gauges:ArcScale.RangeBars>
+                    <Gauges:ArcScaleRangeBar AnchorValue="7" Value="3"/>
+                </Gauges:ArcScale.RangeBars>
+                <Gauges:ArcScale.Markers>
+                    <Gauges:ArcScaleMarker Value="7"/>
+                </Gauges:ArcScale.Markers>
+                <Gauges:ArcScale.Needles>
+                    <Gauges:ArcScaleNeedle Value="3"/>
+                    <Gauges:ArcScaleNeedle Value="12"/>
+                </Gauges:ArcScale.Needles>
+                <Gauges:ArcScale.LabelOptions>
+                    <Gauges:ArcScaleLabelOptions ShowFirst="False"/>
+                </Gauges:ArcScale.LabelOptions>
+            </Gauges:ArcScale>
+        </Gauges:CircularGauge>
+
+    </Grid>
+</Page>
